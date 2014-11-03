@@ -10,17 +10,17 @@ List of configurable parameters
 
 config.properties
 ------------------
-Database IP Address
-Database Port
-Database Username
-Database Password
-Database Name
+Database IP Address,
+Database Port,
+Database Username,
+Database Password,
+Database Name,
 
 application.properties
 -----------------------
-Report file name prefix (Timestamp will be added as specified like DD_MM_YYYY)
-TimeStamp format
-SQL Query
+Report file name prefix (Timestamp will be added as specified like DD_MM_YYYY),
+TimeStamp format,
+SQL Query,
 Path to save the Excel Report
 
 Note :- Trying to make it compatable from Java version 1.5
