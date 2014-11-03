@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
@@ -28,6 +29,8 @@ public static void main(String[] args) {
 		Connection con = DriverManager.getConnection("url", "user", "pass");
 		Statement st = con.createStatement();
 		ResultSet rs = st.executeQuery("Select * from tablename");
+		ResultSetMetaData rsmd = rs.getMetaData();
+		int columnsNumber = rsmd.getColumnCount();
 		HSSFWorkbook workbook = new HSSFWorkbook();
 		HSSFSheet sheet = workbook.createSheet("lawix10");
 		HSSFRow rowhead = sheet.createRow((short) 0);

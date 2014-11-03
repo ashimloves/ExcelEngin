@@ -1,0 +1,17 @@
+List<String> sids = new ArrayList<String>();
+List<String> lids = new ArrayList<String>();
+
+String query = "SELECT rlink_id, COUNT(*)"
+             + "FROM dbo.Locate  "
+             + "GROUP BY rlink_id ";
+
+ResultSet rs4 = yourconnection.createStatement().executeQuery(query);
+
+while (rs4.next()) {
+    sids.add(rs4.getString(1));
+    lids.add(rs4.getString(2));
+}
+
+String show[] = sids.toArray(sids.size());
+String actuate[] = lids.toArray(lids.size());
+
